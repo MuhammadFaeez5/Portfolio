@@ -1,0 +1,8 @@
+{
+  "name": "Nexus Portfolio - AI & Full Stack Engineer",
+  "description": "A premium, minimalist portfolio for AI Engineers and Web Developers featuring AI-generated illustrations and smooth animations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
