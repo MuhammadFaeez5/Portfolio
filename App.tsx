@@ -21,8 +21,6 @@ const App: React.FC = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          
-          // Handle child staggers
           if (entry.target.classList.contains('stagger')) {
             const children = entry.target.children;
             Array.from(children).forEach((child, i) => {
@@ -40,8 +38,8 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-charcoal text-white min-h-screen selection:bg-accent selection:text-black">
-      <Navbar theme={theme} toggleTheme={() => {}} />
+    <div className="bg-charcoal text-slate-300 min-h-screen hero-gradient">
+      <Navbar theme="dark" toggleTheme={() => {}} />
       
       <main className="relative">
         <Hero />
@@ -52,29 +50,28 @@ const App: React.FC = () => {
         <Contact />
       </main>
 
-      <footer className="py-24 border-t border-white/5 bg-[#08080a] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(0,210,255,0.05),transparent_70%)]"></div>
+      <footer className="py-24 border-t border-white/5 bg-[#0b1221] relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center">
-            <div className="reveal scale-up bg-white/[0.03] p-6 rounded-[2rem] border border-white/10 mb-12 sweep-effect">
-              <span className="text-2xl font-black tracking-widest text-white uppercase">FAEEZ.DESIGN</span>
+            <div className="reveal scale-up bg-surface p-6 rounded-[2rem] border border-white/5 mb-12">
+              <span className="text-2xl font-black tracking-widest text-white uppercase">FAEEZ.DIGITAL</span>
             </div>
             <div className="stagger flex flex-wrap justify-center gap-12 mb-16">
               {['GitHub', 'LinkedIn', 'Twitter', 'Dribbble', 'Medium'].map((social) => (
-                <a key={social} href="#" className="text-gray-500 hover:text-white transition-all text-[10px] font-black uppercase tracking-[0.4em]">
+                <a key={social} href="#" className="text-slate-500 hover:text-accent transition-all text-[10px] font-black uppercase tracking-[0.4em]">
                   {social}
                 </a>
               ))}
             </div>
-            <p className="reveal text-gray-700 text-[9px] font-mono uppercase tracking-[0.6em]">
-              MUHAMMAD FAEEZ ARCHIVE // &copy; {new Date().getFullYear()} ALL SYSTEMS OPERATIONAL
+            <p className="reveal text-slate-600 text-[9px] font-mono uppercase tracking-[0.6em]">
+              MUHAMMAD FAEEZ // &copy; {new Date().getFullYear()} ENGINEERED IN MID-TONE SLATE
             </p>
           </div>
         </div>
       </footer>
 
-      {/* Global Grain Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.02] mix-blend-overlay" style={{ backgroundImage: 'url("https://grainy-gradients.vercel.app/noise.svg")' }}></div>
+      {/* Subtle Texture Overlay */}
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#ffffff 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }}></div>
     </div>
   );
 };

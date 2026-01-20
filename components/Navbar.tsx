@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code2, Sun, Moon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   theme: 'dark' | 'light';
   toggleTheme: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
+const Navbar: React.FC<NavbarProps> = ({ theme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,34 +42,34 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'bg-charcoal/80 backdrop-blur-xl border-b border-white/5 py-4' : 'bg-transparent py-8'
+      isScrolled ? 'bg-charcoal/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-xl' : 'bg-transparent py-8'
     }`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-white text-black flex items-center justify-center font-black text-lg rounded-xl group-hover:bg-accent transition-colors duration-500">
+          <div className="w-10 h-10 bg-white text-charcoal flex items-center justify-center font-black text-lg rounded-xl group-hover:bg-accent transition-colors duration-500">
             MF
           </div>
-          <span className={`text-sm font-black tracking-[0.4em] uppercase hidden sm:block ${isScrolled ? 'opacity-100' : 'opacity-0'} transition-opacity`}>
+          <span className={`text-xs font-black tracking-[0.4em] uppercase text-white hidden sm:block ${isScrolled ? 'opacity-100' : 'opacity-0'} transition-opacity`}>
             MUHAMMAD FAEEZ
           </span>
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-12">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
               className={`text-[10px] font-black uppercase tracking-[0.3em] transition-all hover:text-accent ${
-                activeSection === link.id ? 'text-accent' : 'text-gray-500'
+                activeSection === link.id ? 'text-accent' : 'text-slate-400'
               }`}
             >
               {link.name}
             </a>
           ))}
           <div className="h-4 w-px bg-white/10"></div>
-          <a href="#contact" className="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-            Resume
+          <a href="#contact" className="px-6 py-2 bg-white text-charcoal rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-accent transition-all shadow-lg shadow-accent/20">
+            RESUME
           </a>
         </div>
 
@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-charcoal border-b border-white/5 p-10 flex flex-col gap-8 animate-in slide-in-from-top">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-charcoal border-b border-white/5 p-10 flex flex-col gap-8 shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.id}

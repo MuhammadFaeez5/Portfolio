@@ -13,10 +13,11 @@
         theme: {
           extend: {
             colors: {
-              charcoal: '#0a0a0c',
-              surface: '#111114',
-              accent: '#00d2ff',
-              violet: '#7000ff',
+              charcoal: '#0F172A', // Slate 900 (Deep, but not pure black)
+              surface: '#1E293B',  // Slate 800 (Card backgrounds)
+              obsidian: '#F8FAFC', // Inverted for light text on dark
+              accent: '#38BDF8',   // Sky 400
+              violet: '#818CF8',   // Indigo 400
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
@@ -28,15 +29,16 @@
       }
     </script>
     <style>
-      ::-webkit-scrollbar { width: 3px; }
-      ::-webkit-scrollbar-track { background: #0a0a0c; }
-      ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-track { background: #0F172A; }
+      ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #38BDF8; }
 
-      /* Animation Engine v4 - Luminous Edition */
-      .reveal { opacity: 0; transform: translateY(30px); filter: blur(10px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
-      .reveal-left { opacity: 0; transform: translateX(-50px); filter: blur(5px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
-      .reveal-right { opacity: 0; transform: translateX(50px); filter: blur(5px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
-      .scale-up { opacity: 0; transform: scale(0.9); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+      /* Animation Engine v6 - Mid-Tone Edition */
+      .reveal { opacity: 0; transform: translateY(30px); filter: blur(8px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+      .reveal-left { opacity: 0; transform: translateX(-50px); filter: blur(4px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+      .reveal-right { opacity: 0; transform: translateX(50px); filter: blur(4px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+      .scale-up { opacity: 0; transform: scale(0.95); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
       
       .active { opacity: 1 !important; transform: translate(0) scale(1) !important; filter: blur(0) !important; }
 
@@ -44,30 +46,25 @@
       .active.stagger > * { opacity: 1; transform: translateY(0); }
 
       .glass {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(30, 41, 59, 0.6);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
       
-      .luminous-glow {
-        background: radial-gradient(circle at center, rgba(0, 210, 255, 0.12) 0%, transparent 80%);
+      .soft-shadow {
+        box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.5);
       }
 
-      @keyframes light-sweep {
-        0% { transform: translateX(-100%) skewX(-15deg); }
-        100% { transform: translateX(200%) skewX(-15deg); }
+      .hero-gradient {
+        background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at bottom left, rgba(129, 140, 248, 0.08) 0%, transparent 50%);
       }
 
-      .sweep-effect {
-        position: relative;
-        overflow: hidden;
-      }
-      .sweep-effect::after {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; width: 40%; height: 100%;
-        background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
-        animation: light-sweep 4s infinite linear;
+      @keyframes slow-pan {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
       }
     </style>
   <script type="importmap">
@@ -82,7 +79,7 @@
 }
 </script>
 </head>
-  <body class="bg-charcoal text-gray-100 font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-black">
+  <body class="bg-charcoal text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-charcoal">
     <div id="root"></div>
   </body>
 </html>
