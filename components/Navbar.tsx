@@ -68,7 +68,10 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
             </a>
           ))}
           <div className="h-4 w-px bg-white/10"></div>
-          <a href="#contact" className="px-6 py-2 bg-white text-charcoal rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-accent transition-all shadow-lg shadow-accent/20">
+          <a
+            href="Faeez Resume-.pdf"
+            target="_blank"
+            className="px-6 py-2 bg-white text-charcoal rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-accent transition-all shadow-lg shadow-accent/20">
             RESUME
           </a>
         </div>

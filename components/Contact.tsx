@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">Electronic Mail</div>
-                  <div className="text-2xl lg:text-3xl font-black text-white">faeez@engineer.com</div>
+                  <div className="text-2xl lg:text-3xl font-black text-white">faeezsalman939@gmail.com</div>
                 </div>
               </a>
               
@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
                       ></textarea>
                     </div>
                     <button className="w-full py-8 bg-white text-charcoal rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs hover:bg-accent hover:text-white transition-all duration-500 flex items-center justify-center gap-4 shadow-xl">
-                      DISPATCH <Send size={20} />
+                      SEND <Send size={20} />
                     </button>
                   </form>
                 )}

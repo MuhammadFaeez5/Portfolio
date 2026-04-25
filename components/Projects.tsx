@@ -12,13 +12,10 @@ const Projects: React.FC = () => {
           <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-12 bg-violet"></div>
-              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-violet">Curated Archive</span>
+              <span className="text-[13px] font-black uppercase tracking-[0.5em] text-violet">PROTOTYPE TO PRODUCTION</span>
             </div>
             <h2 className="text-6xl lg:text-8xl font-black tracking-tighter text-white">FEATURED <br /> <span className="text-slate-700">WORKS.</span></h2>
           </div>
-          <button className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 hover:text-white transition-colors">
-            View All Experiments <Plus size={16} />
-          </button>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto">
@@ -54,10 +51,10 @@ const Projects: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex gap-8">
-                    <a href={project.githubUrl} className="text-slate-500 hover:text-white transition-colors"><Github size={20} /></a>
-                    <a href={project.liveUrl} className="text-slate-500 hover:text-white transition-colors"><ExternalLink size={20} /></a>
+                    <a href={project.githubUrl} className="text-slate-500 hover:text-white transition-colors"><Github size={25} /></a>
                   </div>
-                  <button className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-charcoal transition-all shadow-sm">
+                  <button className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-charcoal transition-all shadow-sm"
+                  onClick={() => window.open(project.liveUrl, "_blank", "noopener,noreferrer")}>
                     <ArrowUpRight size={24} />
                   </button>
                 </div>

@@ -54,7 +54,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center">
             <div className="reveal scale-up bg-surface p-6 rounded-[2rem] border border-white/5 mb-12">
-              <span className="text-2xl font-black tracking-widest text-white uppercase">FAEEZ.DIGITAL</span>
+              <span className="text-2xl font-black tracking-widest text-white uppercase">FAEEZ</span>
             </div>
             <div className="stagger flex flex-wrap justify-center gap-12 mb-16">
               {['GitHub', 'LinkedIn', 'Twitter', 'Dribbble', 'Medium'].map((social) => (
