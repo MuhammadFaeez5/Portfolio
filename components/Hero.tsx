@@ -73,11 +73,11 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="lg:col-span-5 relative reveal scale-up hidden lg:block">
-            <div className="relative z-10 aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 group shadow-2xl">
+            <div className="relative z-10 aspect-[5/5] rounded-[3rem] overflow-hidden border border-white/10 group shadow-2xl">
               <img
                 src="/hero.png"
                 alt="Muhammad Faeez"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                className="w-full h-full object-cover transition-all duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent"></div>
               

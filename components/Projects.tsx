@@ -26,10 +26,11 @@ const Projects: React.FC = () => {
               style={{ transitionDelay: `${idx * 150}ms` }}
             >
               <div className="aspect-[16/10] overflow-hidden bg-charcoal">
-                <AiImage 
-                  prompt={project.imagePrompt} 
-                  className="w-full h-full scale-100 group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
-                />
+                <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000"
+              />
               </div>
 
               <div className="p-12">

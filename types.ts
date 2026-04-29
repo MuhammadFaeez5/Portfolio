@@ -6,7 +6,7 @@ export interface Project {
   techStack: string[];
   githubUrl: string;
   liveUrl: string;
-  imagePrompt: string;
+  image: string;
 }
 
 export interface SkillCategory {

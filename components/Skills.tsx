@@ -25,13 +25,6 @@ const SkillModule: React.FC<{ category: any, index: number, icon: React.ReactNod
           <div className={`w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-white/10`} style={{ color: accentColor }}>
             {icon}
           </div>
-          <div className="text-right">
-            <div className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-500 mb-1">Performance</div>
-            <div className="flex items-center gap-2 justify-end">
-              <span className="text-[10px] font-mono font-bold text-white">MAX_OUTPUT</span>
-              <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: accentColor }}></span>
-            </div>
-          </div>
         </div>
 
         <h4 className="text-2xl font-black text-white mb-8 tracking-tighter">{category.title}</h4>
@@ -56,13 +49,6 @@ const SkillModule: React.FC<{ category: any, index: number, icon: React.ReactNod
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 flex items-center justify-between opacity-30 group-hover:opacity-100 transition-opacity">
-          <div className="flex items-center gap-2">
-            <Activity size={12} className="text-slate-500" />
-            <span className="text-[8px] font-black uppercase tracking-widest text-slate-500">IO_Latency: 0.2ms</span>
-          </div>
-          <div className="text-[8px] font-black uppercase tracking-widest text-slate-500">CORE_V{index + 1}</div>
-        </div>
       </div>
     </div>
   );
@@ -83,12 +69,7 @@ const Skills: React.FC = () => {
             </div>
             <h2 className="text-6xl lg:text-8xl font-black tracking-tighter text-white leading-none">THE <br /> <span className="text-slate-700">FOUNDRY.</span></h2>
           </div>
-          <div className="hidden lg:flex items-center gap-10">
-            <div className="p-5 glass rounded-2xl flex items-center gap-4 bg-charcoal border-white/5">
-              <Cpu size={20} className="text-accent" />
-              <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">AI_OPTIMIZED_BUILD</span>
-            </div>
-          </div>
+          
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">

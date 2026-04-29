@@ -8,6 +8,13 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 
+
+const socialData = [
+  { name: 'GitHub', url: 'https://github.com/MuhammadFaeez5' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/faeez-salman' },
+  { name: 'website', url: 'https://muhammadfaeez.vercel.app' }
+];
+
 const App: React.FC = () => {
   const [theme] = useState<'dark'>('dark');
 
@@ -54,12 +61,18 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center">
             <div className="reveal scale-up bg-surface p-6 rounded-[2rem] border border-white/5 mb-12">
-              <span className="text-2xl font-black tracking-widest text-white uppercase">FAEEZ</span>
+              <span className="text-2xl font-black tracking-widest text-white uppercase">MUHAMMAD FAEEZ</span>
             </div>
             <div className="stagger flex flex-wrap justify-center gap-12 mb-16">
-              {['GitHub', 'LinkedIn', 'Twitter', 'Dribbble', 'Medium'].map((social) => (
-                <a key={social} href="#" className="text-slate-500 hover:text-accent transition-all text-[10px] font-black uppercase tracking-[0.4em]">
-                  {social}
+              {socialData.map((social) => (
+                <a 
+                  key={social.name} 
+                  href={social.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-slate-500 hover:text-accent transition-all text-[10px] font-black uppercase tracking-[0.4em]"
+                >
+                  {social.name}
                 </a>
               ))}
             </div>

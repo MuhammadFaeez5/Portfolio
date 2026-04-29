@@ -2,6 +2,13 @@
 import React, { useState } from 'react';
 import { Mail, Github, Linkedin, Send, Globe, ArrowRight } from 'lucide-react';
 
+
+const socialLinks = [
+  { Icon: Github, url: "https://github.com/MuhammadFaeez5" },
+  { Icon: Linkedin, url: "https://linkedin.com/in/faeez-salman" },
+  { Icon: Globe, url: "https://muhammadfaeez.vercel.app" }
+];
+
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
 
@@ -32,8 +39,14 @@ const Contact: React.FC = () => {
               </a>
               
               <div className="flex gap-6">
-                {[Github, Linkedin, Globe].map((Icon, idx) => (
-                  <a key={idx} href="#" className="w-16 h-16 rounded-3xl bg-surface border border-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-charcoal hover:soft-shadow transition-all">
+                {socialLinks.map(({ Icon, url }, idx) => (
+                  <a 
+                    key={idx} 
+                    href={url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-16 h-16 rounded-3xl bg-surface border border-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-charcoal hover:soft-shadow transition-all"
+                  >
                     <Icon size={24} />
                   </a>
                 ))}
@@ -51,29 +64,29 @@ const Contact: React.FC = () => {
                 ) : (
                   <form onSubmit={(e) => {e.preventDefault(); setSubmitted(true);}} className="space-y-8">
                     <div className="space-y-2">
-                      <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-4">Full_Name</label>
+                      <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-4">Full Name</label>
                       <input 
                         required
                         className="w-full bg-charcoal border border-white/5 rounded-[2rem] px-8 py-6 text-white focus:outline-none focus:border-accent focus:bg-[#1a2335] transition-all text-lg font-bold placeholder:text-slate-700"
-                        placeholder="e.g. John Doe"
+                        placeholder="e.g. Ahmad"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-4">Email_Address</label>
+                      <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-4">Email Address</label>
                       <input 
                         required
                         type="email"
                         className="w-full bg-charcoal border border-white/5 rounded-[2rem] px-8 py-6 text-white focus:outline-none focus:border-accent focus:bg-[#1a2335] transition-all text-lg font-bold placeholder:text-slate-700"
-                        placeholder="john@example.com"
+                        placeholder="ahmad@example.com"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-4">Message_Data</label>
+                      <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-4">Message</label>
                       <textarea 
                         required
                         rows={4}
                         className="w-full bg-charcoal border border-white/5 rounded-[2rem] px-8 py-6 text-white focus:outline-none focus:border-accent focus:bg-[#1a2335] transition-all text-lg font-bold placeholder:text-slate-700 resize-none"
-                        placeholder="Your mission brief..."
+                        placeholder="Your message..."
                       ></textarea>
                     </div>
                     <button className="w-full py-8 bg-white text-charcoal rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs hover:bg-accent hover:text-white transition-all duration-500 flex items-center justify-center gap-4 shadow-xl">

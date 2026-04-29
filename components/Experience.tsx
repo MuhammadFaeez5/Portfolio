@@ -9,13 +9,10 @@ const Experience: React.FC = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="reveal flex flex-col md:flex-row justify-between items-baseline mb-32 gap-6">
           <div className="max-w-xl">
-            <h2 className="text-sm font-black uppercase tracking-[0.5em] text-violet mb-6">Career Trajectory</h2>
+            <h2 className="text-sm font-black uppercase tracking-[0.5em] text-violet mb-6">Career Path</h2>
             <h3 className="text-5xl lg:text-7xl font-bold tracking-tighter text-white">THE <span className="text-slate-800">PROGRESSION.</span></h3>
           </div>
-          <div className="text-slate-600 font-mono text-[10px] text-right uppercase tracking-widest">
-             Ref_ID: 0x90210 <br />
-             Log: Career_History
-          </div>
+          
         </div>
 
         <div className="relative space-y-24">
