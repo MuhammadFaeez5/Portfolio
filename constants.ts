@@ -9,7 +9,7 @@ export const PROJECTS: Project[] = [
     techStack: ['Python', 'Llama-3.3-70B', 'Groq', 'Streamlit'],
     githubUrl: 'https://github.com/MuhammadFaeez5/Medical-Chatbot',
     liveUrl: 'https://medicalaibot.streamlit.app/',
-    image: '/medbot.png'
+    image: '/medbot.webp'
   },
   {
     id: '2',
@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
     techStack: ['Numpy', 'Pandas','Decision Trees', 'Streamlit'],
     githubUrl: 'https://github.com/MuhammadFaeez5/Traffic-Congestion-Control',
     liveUrl: 'https://trafficcongestion.streamlit.app/',
-    image: '/traffic.png'
+    image: '/traffic.webp'
   },
   {
     id: '3',
@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
     techStack: ['Python', 'Numpy', 'CLIP', 'Streamlit'],
     githubUrl: 'https://github.com/MuhammadFaeez5/Superstore-Image-Search',
     liveUrl: 'https://searchgoodsbyimage.streamlit.app/',
-    image: '/superstore.png'
+    image: '/superstore.webp'
   },
   {
     id: '4',
@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
     techStack: ['Python','Numpy','Pandas', 'Linear Regression', 'Streamlit'],
     githubUrl: 'https://github.com/MuhammadFaeez5/Salary-Prediction-APP',
     liveUrl: 'https://salaryprediction56.streamlit.app/',
-    image: '/salary.png'
+    image: '/salary.webp'
   }
 ];
 
